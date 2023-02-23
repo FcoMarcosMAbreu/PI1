@@ -1,13 +1,6 @@
 # Programação para Internet I (IFPI - ADS)
 
-
-https://t.me/FcoMarcosMAbreu
-
-https://wa.me/5586981273995
-
-https://wa.me/5586988488668
-
-# Habilidades
+## Habilidades
 
 Virtualização de sistemas;
 
@@ -15,13 +8,13 @@ Infraestrutura de servidor web;
 
 Modelagem de negócios
 
-# Interesses
+## Interesses
 
 Aplicar tecnologias nos micro e pequenos negócios usando a metodologia de startup enxuta.
 
 Empreender de forma independente.
 
-# Portfólio
+## Portfólio
 
 **2019:** Recursos para pessoas desenvolvedoras de periferia
 
@@ -65,16 +58,17 @@ https://github.com/fititnt/recursos-desenvolvimento-periferia
 
 - Como Calcular o Valuation da sua Startup
 
-# Próximas Atividades
+## Próximas Atividades
 
 Geração de páginas estáticas
 
-Plano de negócios utilizando CMS
-
 Ecommerce
-
-API do Wordpress
 
 ReactJS
 
-React Native
+## Executar estes exercícios
+
+### PyEnv + VEnv
+
+`source /home/marcos/Workspace/PI1/.venv/bin/activate`
+
