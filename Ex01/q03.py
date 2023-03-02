@@ -9,7 +9,7 @@ page = input("Escolha uma página: ")
 requis = requests.get(page)
 print(requis.status_code)
 print(requis.headers['content-type'])
-print(requis.encoding + '\n\n')
+print(requis.encoding)
 """ print(requis.text) """
 """ print(requis.json()) """
 
