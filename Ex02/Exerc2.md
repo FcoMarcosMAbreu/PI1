@@ -1,3 +1,7 @@
+# Vídeo de apresentação:
+
+(Buscador Web - Exercício 2 de Programação para Internet I)[https://youtu.be/YbSOOnvy0iU]
+
 Crie um pequeno mecanismo de busca na WEB utilizando a linguagem Python e as bibliotecas Requests e Beautiful Soup. O script deve funcionar através de uma chamada de função como:
 
 ```python
@@ -62,4 +66,13 @@ cabecalhos = soup.find_all('h3')
 for cabecalho in cabecalhos:
     texto = cabecalho.get_text()
     print(" - ", texto)
+```
+
+### Embeded server
+
+https://www.askpython.com/python-modules/python-httpserver
+
+``` sh
+cd server/
+python -m http.server 9000
 ```
