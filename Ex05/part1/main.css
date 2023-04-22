@@ -1,0 +1,58 @@
+* {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, #b3cce2, #d9ccc1);
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h1, h2 {
+    background-color: #005eb0;
+    color: #d9ccc1;
+}
+
+p {
+    font-size: 1.0rem;
+    color: #024059;
+}
+
+blockquote {
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.author {
+    text-align: right;
+    color: darkslategray;
+    font-style: italic;
+    font-size: .8rem;
+}
+
+#lorem {
+    position: relative;
+} :before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+}
