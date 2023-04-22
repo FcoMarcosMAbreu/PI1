@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Exemplo de uso do DOM</title>
+</head>
+<body id="body">
+    <h1>Julius</h1>
+    <p id="aviso">Quando você clicar em Próximo, eu vou estar lá!</p>
+    <p id="ameaca" hidden>Achou que eu tava brincando?!</p>
+    <button id="anterior" onclick="voltar()" hidden>Anterior</button>
+    <button id="proximo" onclick="ameaca()">Próximo</button>
+    <ul id="nutrientes" hidden>
+        <li>proteínas</li>
+        <li>lipídios</li>
+        <li>vitaminas</li>
+        <li>carboidratos</li>
+        <li>isoleucina</li>
+        <li>leucina</li>
+        <li>valina</li>
+        <li>fenilalanina</li>
+        <li>metionina</li>
+        <li>treonina</li>
+        <li>triptofano</li>
+        <li>lisina</li>
+    </ul>
+    <button id="quant" onclick="quant()" hidden>Ver quantidade</button>
+    <hr>
+    <h1>Exemplo de uso do DOM</h1>
+    <p id="paragrafo">Clique no botão abaixo para alterar o texto deste parágrafo:</p>
+    <button id="botao">Clique aqui</button>
+    <button id="limpar">Limpar!</button>
+    <hr>
+    <h1>Questão 4</h1>
+    <p><strong>Resposta:</strong> A propriedade <code>textContent</code> é uma string de todo o seu conteúdo e dos descendentes enquanto que o <code>innerHTML</code>, como o próprio nome diz, se refere a todo o código HTML, incluindo tags, interno do referido elemento. Isso quer dizer que o <code>innerHTML</code> pode conter recursivamente um ou vários elementos filhos.</p>
+    <p><strong>Exemplos:</strong></p>
+    <p>A variável conteudoTextual abaixo exibirá somente o texto, sem as tags, da lista de nutrientes acima.</p>
+    <pre>
+        <code>
+            var conteudoTextual = document.getElementById("nutrientes").textContent
+        </code>
+    </pre>
+    <p><strong>Resultado:</strong></p>
+    <pre>
+        <code>
+            proteínas
+            lipídios
+            vitaminas
+            carboidratos
+            isoleucina
+            leucina
+            valina
+            fenilalanina
+            metionina
+            treonina
+            triptofano
+            lisina
+        </code>
+    </pre>
+    <p>A variável conteudoHTML abriga toda a estrutura dentro da ul nutrientes acima.</p>
+    <pre>
+        <code>
+            var conteudoHTML = document.getElementById("nutrientes").innerHTML
+        </code>
+    </pre>
+    <p><strong>Resultado:</strong></p>
+    <blockquote>
+        
+    </blockquote>
+    <pre>
+        <code>
+            &lt;li>proteínas&lt;/li>
+            &lt;li>lipídios&lt;/li>
+            &lt;li>vitaminas&lt;/li>
+            &lt;li>carboidratos&lt;/li>
+            &lt;li>isoleucina&lt;/li>
+            &lt;li>leucina&lt;/li>
+            &lt;li>valina&lt;/li>
+            &lt;li>fenilalanina&lt;/li>
+            &lt;li>metionina&lt;/li>
+            &lt;li>treonina&lt;/li>
+            &lt;li>triptofano&lt;/li>
+            &lt;li>lisina&lt;/li>
+        </code>
+    </pre>
+    <hr>
+    <h1>Questão 5</h1>
+    <p>No script deste HTML fiz um código que muda a cor de fundo quando clica em Próximo e outra que remove a estilização quando clica em Anterior.</p>
+    <pre>
+        <code>
+            ...
+            document.getElementById("body").style.backgroundColor = "lightcoral"
+            ...
+
+            ...
+            document.getElementById("body").removeAttribute("style")
+            ...
+        </code>
+    </pre>
+    <hr>
+    <h1>Questão 6</h1>
+    <button id="lite" onclick="lite()">Lite</button> <button id="dark" onclick="dark()">Dark</button>
+    <script src="script.js"></script>
+    <script>
+        function ameaca() {
+            document.getElementById("aviso").setAttribute("hidden", true)
+            document.getElementById("proximo").setAttribute("hidden", true)
+            document.getElementById("ameaca").removeAttribute("hidden")
+            document.getElementById("nutrientes").removeAttribute("hidden")
+            document.getElementById("anterior").removeAttribute("hidden")
+            document.getElementById("quant").removeAttribute("hidden")
+            document.getElementById("body").style.backgroundColor = "lightcoral"
+        }
+        function voltar() {
+            document.getElementById("ameaca").setAttribute("hidden", true)
+            document.getElementById("anterior").setAttribute("hidden", true)
+            document.getElementById("nutrientes").setAttribute("hidden", true)
+            document.getElementById("quant").setAttribute("hidden", true)
+            document.getElementById("aviso").removeAttribute("hidden")
+            document.getElementById("proximo").removeAttribute("hidden")
+            document.getElementById("body").removeAttribute("style")
+        }
+        function quant() {
+            var quant = document.getElementsByTagName("li").length
+            alert(quant + " nutrientes.")
+        }
+        function lite() {
+            document.getElementById("body").style.color = "darkslategray"
+            document.getElementById("body").style.backgroundColor = "lightgray"
+        }
+        function dark() {
+            document.getElementById("body").style.color = "lightgray"
+            document.getElementById("body").style.backgroundColor = "darkslategray"
+        }
+    </script>
+</body>
+</html>
