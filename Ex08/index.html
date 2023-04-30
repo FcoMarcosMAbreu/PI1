@@ -17,7 +17,7 @@
     <div id="conteudo"></div>
     <h1>Questão 2</h1>
     <p>Ir para a <a href="./q2.html">Questão 2.</a></p>
-    <h1>Questão <span id="h1q3">3</span> 4</h1>
+    <h1>Questão <span class="updated-question">3</span> 4</h1>
     <!-- <form action="" id="q3"> -->
     <form action="" id="q4">
         <label for="image">Escolha uma imagem para mostrar abaixo.</label>
@@ -33,7 +33,7 @@
         <!-- <button type="submit" disabled>Mostrar</button> -->
     </form>
     <div id="resultado">
-        <!-- Será preenchida pelo script loadImage.js -->
+        <!-- Será preenchida pelo script loadImage.js. -->
     </div>
     <h1>Questão 5</h1>
     <form action="" id="dino-form">
@@ -49,7 +49,6 @@
     <p id="backyard-dino" hidden>Não é possível que você não tenha nem um dinossauro no quintal! 😑 Marque pelo menos um.</p>
     <p id="backyard-dino-ok" hidden>Agora sim! 😉</p>
     <h1>Questão 6</h1>
-    <!-- form textarea button p -->
     <form action="" id="q6-form">
         <label for="paragraph-to-convert">Escreva abaixo um texto para converter em maiúsculas ou minúsculas.</label>
         <textarea name="paragraph-to-convert" id="paragraph-to-convert" cols="30" rows="10"></textarea>
@@ -61,10 +60,36 @@
         <button type="submit" id="convert">Converter</button>
     </form>
     <p id="converted-paragraph" hidden></p>
-    <h1>Questão 7</h1>
+    <h1>Questão <span class="updated-question">7</span> 8 e 9</h1>
     <!-- form input button -> select (size 5) -->
+    <form action="" id="q7-form">
+        <label for="input-option">Adicione uma opção à lista.</label>
+        <input type="text" name="input-option" id="input-option">
+        <button type="submit" id="append-option">Adicionar opção</button>
+        <button type="submit" id="remove-option">Remover opção</button>
+        <!-- Será preenchido pelo script appendOption.js. -->
+        <select name="option-select" id="option-select" size="5"></select>
+    </form>
+    <h1>Questão 10</h1>
+    <h2>Lista 1</h2>
+    <select name="lista-1" id="lista-1" size="5">
+        <option value="jason">Jason</option>
+        <option value="triny">Triny</option>
+        <option value="billy">Billy</option>
+        <option value="kimberly">Kimberly</option>
+        <option value="zack">Zack</option>
+    </select>
+    <button id="l1l2">Lista 1 para lista 2</button>
+    <button id="l2l1">Lista 2 para lista 1</button>
+    <h2>Lista 2</h2>
+    <select name="lista-2" id="lista-2" size="5"></select>
+    <h1>Desafio To-Do</h1>
+    <form action="" id="challenge">
+        <div id="task-list"></div>
+        <input type="text" name="input-task" id="input-task">
+    </form>
     <style>
-        #h1q3 {
+        .updated-question {
             text-decoration-line: line-through overline underline;
             color: grey;
         }
@@ -77,5 +102,8 @@
     <script src="checkDino.js"></script>
     <script src="convertCase.js"></script>
     <script src="appendOption.js"></script>
+    <script src="removeOption.js"></script>
+    <script src="transferChild.js"></script>
+    <script src="toDoApp.js"></script>
 </body>
 </html>
